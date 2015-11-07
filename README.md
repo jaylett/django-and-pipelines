@@ -9,6 +9,7 @@ Just add your name next to the thing you're looking at, possibly adding it at th
  * sigh (takis)
  * [broccoli](brocolli) (*jaylett*)
  * sbt-web (Scala)
+ * asset-pipeline (Grails-ish) (*jaylett*)
 
 ## In more detail
 
