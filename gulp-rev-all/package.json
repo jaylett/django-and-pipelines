@@ -1,0 +1,14 @@
+{
+  "name": "gulp-rev-all-pipeline",
+  "version": "1.0.0",
+  "description": "Basic pipeline for gulp with gulp-rev-all",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rev-all": "^0.8.22",
+    "gulp-sass": "^2.1.0"
+  },
+  "repository": "https://github.com/jaylett/django-and-pipelines",
+  "author": "",
+  "license": "MIT"
+}
