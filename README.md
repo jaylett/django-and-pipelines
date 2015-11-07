@@ -5,7 +5,7 @@ Just add your name next to the thing you're looking at, possibly adding it at th
  * [gulp](https://github.com/jaylett/django-and-pipelines/tree/master/gulp) (ghickman)
  * Sprockets (vad)
  * Webpack (rosco77)
- * browserify (*rbarrois*)
+ * [browserify](https://github.com/jaylett/django-and-pipelines/tree/master/browserify-shell) (*rbarrois*)
  * sigh (takis)
  * [broccoli](https://github.com/jaylett/django-and-pipelines/tree/master/brocolli)
  * sbt-web (Scala) (*jaylett*)
