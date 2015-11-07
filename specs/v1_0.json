@@ -1,0 +1,19 @@
+{
+    "<projectname>-version": "1.0",
+    "assets": {
+        "app.js.map": "app-9f37baa7298.js.map",
+        "app.js": "app-677eb3ddf0a.js"
+    },
+    "files": {
+        "app-9f37baa7298.js.map": {
+            "logical_path": "app.js.map",
+            "size": 324424,
+            "mtime": "2015-11-07T13:40:32+00:00",
+            "digest": "9f37baa7298"
+        }
+    },
+    "metadata": {
+        "generated-by": "sprockets v1.234",
+        "generated-on": "2015-11-07T13:42:22+00:00"
+    }
+}
