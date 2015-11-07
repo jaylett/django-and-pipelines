@@ -28,8 +28,10 @@ gulp.task('rev', function() {
 });
 
 gulp.task('rev-all', function() {
-    var dist = 'dist/rev';
-    var revAll = new RevAll();
+    var dist = 'dist/rev-all';
+    var revAll = new RevAll({
+        fileNameManifest: 'rev-all-manifest.json'
+    });
 
     return gulp.src('sass/*.scss')
        .pipe(sass())  // build CSS files

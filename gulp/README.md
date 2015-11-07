@@ -34,11 +34,16 @@ Note: gulp-hash uses SHA1, gulp-rev and gulp-rev-all use MD5
         "main.css": "main-1f6819c179.css"
     }
 
+    cat rev-all-manifest.json
+    {
+        "fonts.css": "fonts.d41d8cd9.css",
+        "main.css": "main.1f6819c1.css"
+    }
 
 ## Hashing Projects
 * [gulp-hash](https://github.com/Dragory/gulp-hash) (SHA1)
 * [gulp-rev](https://github.com/sindresorhus/gulp-rev) (MD5)
-* [gulp-rev-all](https://github.com/smysnk/gulp-rev-all)
+* [gulp-rev-all](https://github.com/smysnk/gulp-rev-all) (MD5)
 
 ### Ignored
 These projects all do hashing to some degree but don't use a manifest file.
