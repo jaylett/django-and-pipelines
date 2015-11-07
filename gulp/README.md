@@ -9,7 +9,10 @@ Tasks (`rev`, `rev-all` & `hash`) follow the same flow:
 
 The manifest file is a simple map of non-hashed names to hashed names.
 
-Note: gulp-hash uses SHA1, gulp-rev and gulp-rev-all use MD5
+## Hashes
+* gulp-hash uses SHA1
+* gulp-rev uses MD5
+* gulp-rev-all uses the first 8 characters of the MD5 hash
 
 ## Install
     npm install
