@@ -1,0 +1,18 @@
+{
+  "name": "browserify-example",
+  "version": "0.0.1",
+  "description": "Demo browserify pipeline for Django",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "~12.0.0",
+    "coffeeify": "^1.1.0",
+    "exorcist": "~0.4.0",
+    "hash-filename": "^1.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/jaylett/django-and-pipelines",
+  "author": "Raphaël Barrois",
+  "license": "ISC"
+}
