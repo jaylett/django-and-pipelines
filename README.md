@@ -3,7 +3,7 @@
 Just add your name next to the thing you're looking at, possibly adding it at the same time.
 
  * gulp (ghickman)
- * Sprockets
+ * Sprockets (rosco77)
  * Webpack
  * browserify (*rbarrois*)
  * sigh
