@@ -5,7 +5,7 @@ Just add your name next to the thing you're looking at, possibly adding it at th
  * gulp (ghickman)
  * Sprockets
  * Webpack
- * browserify
+ * browserify (*rbarrois*)
  * sigh
  * broccoli (*jaylett*)
  * sbt-web (Scala)
