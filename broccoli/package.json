@@ -1,0 +1,22 @@
+{
+  "name": "broccoli-example",
+  "version": "1.0.0",
+  "description": "[Broccoli](https://github.com/broccolijs/broccoli) is a node-based \"beta\" quality pipeline. [broccoli-asset-rev](https://www.npmjs.com/package/broccoli-asset-rev) implements hashing/versioning, and also can spit out manifests in a range of formats. \"Rails-style\" (ie Sprockets) manifest:",
+  "main": "Brocfile.js",
+  "dependencies": {
+    "broccoli-cli": "^1.0.0"
+  },
+  "devDependencies": {
+    "broccoli-asset-rev": "^2.3.0",
+    "broccoli-cli": "^1.0.0",
+    "broccoli-coffee": "^0.5.1",
+    "broccoli-merge-trees": "^0.2.4",
+    "broccoli-sass": "^0.6.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/jaylett/django-and-pipelines",
+  "author": "James Aylett",
+  "license": "ISC"
+}
