@@ -8,7 +8,7 @@ Just add your name next to the thing you're looking at, possibly adding it at th
  * browserify (*rbarrois*)
  * sigh (takis)
  * [broccoli](https://github.com/jaylett/django-and-pipelines/tree/master/brocolli)
- * sbt-web (Scala)
+ * sbt-web (Scala) (*jaylett*)
  * [asset-pipeline](https://github.com/jaylett/django-and-pipelines/tree/master/asset-pipeline) (Grails-ish)
 
 ## In more detail
