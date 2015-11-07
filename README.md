@@ -7,5 +7,5 @@ Just add your name next to the thing you're looking at, possibly adding it at th
  * Webpack
  * browserify
  * sigh
- * broccoli
+ * broccoli (*jaylett*)
  * sbt-web (Scala)
