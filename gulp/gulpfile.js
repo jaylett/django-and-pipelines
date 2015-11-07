@@ -1,4 +1,6 @@
 var gulp = require('gulp');
+var concat = require('gulp-concat');
+var minifyCss = require('gulp-minify-css');
 var sass = require('gulp-sass');
 
 // manifest builders
@@ -10,6 +12,8 @@ gulp.task('hash', function() {
     var dist = 'dist/hash';
     return gulp.src('sass/*.scss')
        .pipe(sass())  // build CSS files
+       .pipe(concat('all.css'))  // combine the CSS files
+       .pipe(minifyCss({'compatibility': 'ie8'}))  // minify CSS
        .pipe(hash())  // hash the filenames
        .pipe(gulp.dest(dist))  // write the files
        .pipe(hash.manifest('assets.json')) // Switch to the manifest file
