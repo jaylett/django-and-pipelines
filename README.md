@@ -6,7 +6,7 @@ Just add your name next to the thing you're looking at, possibly adding it at th
  * Sprockets 
  * Webpack (rosco77)
  * browserify (*rbarrois*)
- * sigh
+ * sigh (takis)
  * [broccoli](brocolli) (*jaylett*)
  * sbt-web (Scala)
 
