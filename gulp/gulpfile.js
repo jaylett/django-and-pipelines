@@ -10,14 +10,17 @@ var hash = require('gulp-hash');
 var rev = require('gulp-rev');
 var RevAll = require("gulp-rev-all");
 
-gulp.task('clean', function(cb) {
-    return rimraf('./dist', cb);
-});
-
+// Output dirs
+distHash = 'dist/hash';
+distRev = 'dist/rev';
+distRevAll = 'dist/revAll';
 
 /*
  * HASH
  */
+gulp.task('hashClean', function(cb) {
+    return rimraf(distHash, cb);
+});
 gulp.task('hashCss', function() {
     var dist = 'dist/hash';
     return gulp.src('sass/*.scss')
@@ -39,12 +42,15 @@ gulp.task('hashJs', function() {
         .pipe(hash.manifest('assets.json', true))
         .pipe(gulp.dest(dist));
 });
-gulp.task('hash', ['clean', 'hashCss', 'hashJs']);
+gulp.task('hash', ['hashClean', 'hashCss', 'hashJs']);
 
 
 /*
  * REV
  */
+gulp.task('revClean', function(cb) {
+    return rimraf(distRev, cb);
+});
 gulp.task('revCss', function() {
     var dist = 'dist/rev';
     return gulp.src('sass/*.scss')
@@ -64,12 +70,15 @@ gulp.task('revJs', function() {
         .pipe(rev.manifest()) // Switch to the manifest file
         .pipe(gulp.dest(dist));
 });
-gulp.task('rev', ['clean', 'revCss', 'revJs']);
+gulp.task('rev', ['revClean', 'revCss', 'revJs']);
 
 
 /*
  * REV-ALL
  */
+gulp.task('revAllClean', function(cb) {
+    return rimraf(distRevAll, cb);
+});
 gulp.task('revAllCss', function() {
     var dist = 'dist/rev-all';
     var revAll = new RevAll({
@@ -97,4 +106,4 @@ gulp.task('revAllJs', function() {
         .pipe(revAll.manifestFile())
         .pipe(gulp.dest(dist));
 });
-gulp.task('revAll', ['clean', 'revAllCss', 'revJs']);
+gulp.task('revAll', ['revAllClean', 'revAllCss', 'revJs']);
