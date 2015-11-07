@@ -42,7 +42,10 @@ gulp.task('hashJs', function() {
 gulp.task('hash', ['clean', 'hashCss', 'hashJs']);
 
 
-gulp.task('rev', function() {
+/*
+ * REV
+ */
+gulp.task('revCss', function() {
     var dist = 'dist/rev';
     return gulp.src('sass/*.scss')
        .pipe(sass())  // build CSS files
@@ -51,8 +54,13 @@ gulp.task('rev', function() {
        .pipe(rev.manifest()) // Switch to the manifest file
        .pipe(gulp.dest(dist));  // write the manifest file
 });
+gulp.task('rev', ['clean', 'revCss']);
 
-gulp.task('rev-all', function() {
+
+/*
+ * REV-ALL
+ */
+gulp.task('revAllCss', function() {
     var dist = 'dist/rev-all';
     var revAll = new RevAll({
         fileNameManifest: 'rev-all-manifest.json'
@@ -65,3 +73,4 @@ gulp.task('rev-all', function() {
        .pipe(revAll.manifestFile())
        .pipe(gulp.dest(dist));  // write the manifest file
 });
+gulp.task('revAll', ['clean', 'revAllCss']);
