@@ -51,11 +51,13 @@ gulp.task('revClean', function(cb) {
 });
 gulp.task('revCss', function() {
     return gulp.src('sass/*.scss')
-       .pipe(sass())  // build CSS files
-       .pipe(rev())  // hash the filenames
-       .pipe(gulp.dest(distRev))  // write the files
-       .pipe(rev.manifest()) // Switch to the manifest file
-       .pipe(gulp.dest(distRev));  // write the manifest file
+        .pipe(sass())  // build CSS files
+        .pipe(concat('all.css'))  // combine the CSS files
+        .pipe(minifyCss({'compatibility': 'ie8'}))  // minify CSS
+        .pipe(rev())  // hash the filenames
+        .pipe(gulp.dest(distRev))  // write the files
+        .pipe(rev.manifest()) // Switch to the manifest file
+        .pipe(gulp.dest(distRev));  // write the manifest file
 });
 gulp.task('revJs', function() {
     return gulp.src('js/**/*.js')
@@ -81,11 +83,13 @@ gulp.task('revAllCss', function() {
     });
 
     return gulp.src('sass/*.scss')
-       .pipe(sass())  // build CSS files
-       .pipe(revAll.revision()) // hash the filenames
-       .pipe(gulp.dest(distRevAll))  // write the files
-       .pipe(revAll.manifestFile())
-       .pipe(gulp.dest(distRevAll));  // write the manifest file
+        .pipe(sass())  // build CSS files
+        .pipe(concat('all.css'))  // combine the CSS files
+        .pipe(minifyCss({'compatibility': 'ie8'}))  // minify CSS
+        .pipe(revAll.revision()) // hash the filenames
+        .pipe(gulp.dest(distRevAll))  // write the files
+        .pipe(revAll.manifestFile())
+        .pipe(gulp.dest(distRevAll));  // write the manifest file
 });
 gulp.task('revAllJs', function() {
     var revAll = new RevAll({
