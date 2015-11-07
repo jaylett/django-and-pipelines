@@ -2,7 +2,7 @@
 
 Just add your name next to the thing you're looking at, possibly adding it at the same time.
 
- * gulp (ghickman)
+ * [gulp](https://github.com/jaylett/django-and-pipelines/tree/master/gulp) (ghickman)
  * Sprockets 
  * Webpack (rosco77)
  * browserify (*rbarrois*)
