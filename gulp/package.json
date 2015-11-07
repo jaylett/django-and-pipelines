@@ -6,6 +6,7 @@
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-hash": "^3.0.1",
+    "gulp-rev": "^6.0.1",
     "gulp-sass": "^2.1.0"
   },
   "repository": "https://github.com/jaylett/django-and-pipelines",
