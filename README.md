@@ -7,7 +7,7 @@ Just add your name next to the thing you're looking at, possibly adding it at th
  * Webpack (rosco77)
  * [browserify](https://github.com/jaylett/django-and-pipelines/tree/master/browserify-shell) (*rbarrois*)
  * sigh (takis)
- * [broccoli](https://github.com/jaylett/django-and-pipelines/tree/master/brocolli)
+ * [broccoli](https://github.com/jaylett/django-and-pipelines/tree/master/broccoli)
  * sbt-web (Scala) (*jaylett*)
  * [asset-pipeline](https://github.com/jaylett/django-and-pipelines/tree/master/asset-pipeline) (Grails-ish)
 
