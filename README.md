@@ -4,7 +4,7 @@ Just add your name next to the thing you're looking at, possibly adding it at th
 
  * [gulp](https://github.com/jaylett/django-and-pipelines/tree/master/gulp) (ghickman)
  * [Sprockets](https://github.com/jaylett/django-and-pipelines/tree/master/sprockets) (vad)
- * Webpack (rosco77)
+ * [Webpack](https://github.com/jaylett/django-and-pipelines/tree/master/webpack) (*rosco77*)
  * [browserify](https://github.com/jaylett/django-and-pipelines/tree/master/browserify-shell) (*rbarrois*)
  * [sigh](https://github.com/jaylett/django-and-pipelines/tree/master/sigh) (takis)
  * [broccoli](https://github.com/jaylett/django-and-pipelines/tree/master/broccoli)
