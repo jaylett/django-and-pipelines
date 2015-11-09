@@ -18,7 +18,9 @@ var tree = mergeTrees([styles, scripts]);
 var hashed = new rev(
     tree,
     {
-        generateRailsManifest: true
+        generateAssetMap: true,
+        generateRailsManifest: true,
+        railsManifestPath: 'manifest.json',
     }
 );
 
