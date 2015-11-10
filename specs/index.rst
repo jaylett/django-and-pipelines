@@ -207,13 +207,16 @@ A simplified version of the format is documented only for backwards compatibilit
    support the simplified version (and will provide compatibility with a
    greater range of pipelines if they do so).
 
-Determining an ``assets-manifest.json`` version
------------------------------------------------
 
-In order to ensure compatibility with the simplified version and with sprocket/broccoli manifests,
-implementation **SHOULD** use the following heuristic to determine the version of an *assets-manifest* file:
+Backwards-compatible version support
+""""""""""""""""""""""""""""""""""""
 
-- If the file doesn't parse as JSON or its toplevel is not a dictionary, reject it.
-- If the ``assets-manifest-version`` key is available, use that to parse the file.
-- Otherwise, if an ``assets`` key is provided and maps to a dictionary, parse with verion ``1.0``
-- Otherwise, expect a simplified version.
+Since both the simplified version and legacy Rails/Sprocket-compatible manifests do not contain an explicit version number, implementations **SHOULD** use
+the following heuristic to determine the version of an <> file:
+
+- If the file doesn't parse as JSON or its toplevel is not a object, reject it.
+- If the ``<>-version`` pair is available, use that to parse the file.
+- Otherwise, if an ``assets`` key is provided and maps to an object, parse as a verion ``1.0`` file.
+- Otherwise, parse as a simplified version file.
+
+
