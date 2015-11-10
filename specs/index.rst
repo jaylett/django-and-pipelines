@@ -190,8 +190,7 @@ Example
 Simplified version
 """"""""""""""""""
 
-A simplified version of the format is available for simpler pipelines;
-in that case, the JSON file only contains the *assets* map:
+A simplified version of the format is documented only for backwards compatibility; in that case, the JSON file directly contains the *assets* object:
 
 .. code-block:: json
 
@@ -201,6 +200,12 @@ in that case, the JSON file only contains the *assets* map:
       "bootstrap.css": "https://cdn.example.org/bootstrap.css"
     }
 
+.. warning::
+
+   The simplified version **SHOULD NOT** be implemented by new pipelines.
+   Frameworks or template engines implementing <> **MAY** choose to
+   support the simplified version (and will provide compatibility with a
+   greater range of pipelines if they do so).
 
 Determining an ``assets-manifest.json`` version
 -----------------------------------------------
