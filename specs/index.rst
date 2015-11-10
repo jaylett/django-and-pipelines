@@ -89,30 +89,6 @@ Version 1.0
 An *assets-manifest* file is a JSON file, usually named ``assets-manifest.json``.
 Its toplevel entry **MUST** be a dictionary.
 
-Example:
-
-.. code-block:: json
-
-    {
-        "<projectname>-version": "1.0",
-        "assets": {
-            "app.js.map": "app-9f37baa7298.js.map",
-            "app.js": "app-677eb3ddf0a.js"
-        },
-        "files": {
-            "app-9f37baa7298.js.map": {
-                "logical_path": "app.js.map",
-                "size": 324424,
-                "mtime": "2015-11-07T13:40:32+00:00",
-                "digest": "9f37baa7298"
-            }
-        },
-        "metadata": {
-            "generated-by": "frobnicator v1.234",
-            "generated-on": "2015-11-07T13:42:22+00:00"
-        }
-    }
-
 
 .. data:: assets-manifest-version
 
@@ -172,6 +148,43 @@ Example:
 .. note:: Implementations **MAY** add additional entries in the ``metadata`` and ``files`` sections, 
           provided the name of these entries starts with ``x-``.
 
+
+Example
+"""""""
+
+.. code-block:: json
+
+    {
+        "<>-version": "1.0",
+        "assets": {
+            "site.css": "site-4fbcc857.css",
+            "site.js": "site-14ffdec5.js",
+            "site.css.map": "site-4fbcc857.css.map",
+            "site.js.map": "site-14ffdec5.js.map",
+            "lightbox.css": "lightbox-33def45f.css",
+            "subscribe.js": "subscribe-4523ffdc.js",
+            "lightbox.css.map": "lightbox-33def45f.css.map",
+            "subscribe.js.map": "subscribe-4523ffdc.js.map"
+        },
+        "files": {
+            "site-4fbcc857.css": {
+                "logical_path": "site.css",
+                "size": 2746,
+                "mtime": "2015-11-07T13:40:32+00:00",
+                "digest": "4fbcc857"
+            },
+            "site-14ffdec5.js": {
+                "logical_path": "site.js",
+                "size": 324424,
+                "mtime": "2015-11-07T13:40:33+00:00",
+                "digest": "14ffdec5"
+            }
+        },
+        "metadata": {
+            "generated-by": "frobnicator v1.234",
+            "generated-on": "2015-11-07T13:42:22+00:00"
+        }
+    }
 
 
 Simplified version
