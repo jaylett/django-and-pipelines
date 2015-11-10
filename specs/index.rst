@@ -80,70 +80,70 @@ Additionally, each bundle may also have a sourcemap rendered alongside it; the s
    pipeline is configured.
 
 
-File formats
-------------
+File format
+-----------
 
-Version 1.0
-"""""""""""
-
-An *assets-manifest* file is a JSON file, usually named ``assets-manifest.json``.
-Its toplevel entry **MUST** be a dictionary.
+An *assets-manifest* file is a JSON file (hence stored using the UTF-8 encoding), usually named ``assets-manifest.json``. Its toplevel entry **MUST** be an object with the following pair names:
 
 
-.. data:: assets-manifest-version
+.. attribute:: assets-manifest-version
 
-               **REQUIRED**, the version of this specification used by the file
+   **REQUIRED**, the version of this specification used by the file.
 
+.. object:: assets
 
-.. data:: assets
+   **REQUIRED**, an object with pairs where the string *name* is a logical path,
+   and the *value* is either a string (this logical path is rendered
+   by the pipeline into one asset) or an array of strings (this
+   logical path is rendered by the pipeline into several assets).
 
-               **REQUIRED**, this maps an asset's logical path to the actual asset path.
+.. object:: files
 
-.. data:: files
+    **OPTIONAL**, an object providing additional metadata about a
+    single asset. A pipeline **MAY** choose to provide metadata
+    about only a subset of assets that it writes.
 
-    **OPTIONAL**, provides additional metadata about an asset file
-    (i.e the value of an entry of the :attr:`assets` map).
-
-    This dictionary maps an asset path to related metadata;
-    pipelines **MAY** provide the following entries:
+    The string name of each pair is an asset path; the value is an
+    object with the following pair names, all optional:
 
     .. attribute:: logical_path
 
-        *string*, the name of the logical path to which this file relates
+        *string*, the name of the logical path to which this file relates.
 
     .. attribute:: size
 
-        *integer*, the size (in bytes) of the asset file
+        *integer*, the size (in bytes) of the asset file.
 
     .. attribute:: mtime
 
-        *ISO8601 datetime*, when the asset file was last modified
+        *ISO8601 datetime*, when the asset file was last modified.
 
     .. attribute:: digest
 
-        *hex string*, the hexadecimal-encoded digest of the file
+        *hex string*, the hexadecimal-encoded digest of the file.
 
     .. attribute:: sources
 
-        *list of paths*, the relative path to the files used to build this asset
+        *list of paths*, the relative path to the files used to build this asset.
 
     .. attribute:: sourcemap_path
 
         *path*, the relative path to the sourcemap for this file.
 
-.. data:: metadata
+.. object:: metadata
 
     **OPTIONAL**, additional metadata about the pipeline processing.
 
-    Valid fields are:
+    Valid pair names are:
 
     .. attribute:: generated-by
 
-        *text*, a free description of the software that generated this assets-manifest
+       *text*, a free description of the software that generated this assets-manifest.
 
     .. attribute:: generated-on
 
-        *ISO8601 datetime*, when the assets-manifest file was generated
+        *ISO8601 datetime*, when the assets-manifest file was
+        generated.
 
 .. note:: Implementations **MAY** add additional entries in the ``metadata`` and ``files`` sections, 
           provided the name of these entries starts with ``x-``.
