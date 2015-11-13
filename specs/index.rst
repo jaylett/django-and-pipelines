@@ -74,10 +74,20 @@ Additionally, each bundle may also have a sourcemap rendered alongside it; the s
 
 .. note::
 
-   Although it is helpful for any fingerprint used in the asset path
-   of a sourcemap to match the fingerprint of its related rendered
-   asset, this is not always practical depending on how a particular
-   pipeline is configured.
+   For sourcemaps to be automatically discovered, the fingerprint in
+   its asset path should match the fingerprint of the rendered asset
+   that the sourcemap is related to:
+
+    * if the ``site.js`` bundle has an asset ``site.45bf76ed.js``
+    * then the ``site.js.map`` bundle has an asset ``site.45bf76ed.js.map``
+
+   Otherwise, an explicit linking comment will be required in the
+   rendered asset:
+
+    * if the ``site.js`` bundle has an asset ``site.45bf76ed.js``
+    * and the ``site.js.map`` bundle has an asset ``site.1455d2ef.js.map``
+    * then the asset ``site.45bf76ed.js`` should contain the comment
+      ``//# sourceMappingUrl=site.1455d2ef.js.map``
 
 
 File format
